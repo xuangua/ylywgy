@@ -3,7 +3,7 @@
 ![](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.0.1-red.svg)
 ![](https://img.shields.io/badge/%E6%9B%B4%E6%96%B0%E6%97%A5%E6%9C%9F-2018.07.22-blue.svg)
 
-一个免费在线文档的微信小程序
+医路有我公益的微信小程序
 
  ![](http://otbx7z2z0.bkt.clouddn.com/cloud-doc-logo.jpg_120x120.jpg)
 -------------
@@ -34,8 +34,7 @@
 直接clone项目到本地
 
 ### 使用方法
-复制到微信小程序项目运行即可  目前接口是用我开发的程序提供的  基于laravel5.4开发
-后台程序过段时间开源出来
+复制到微信小程序项目运行即可 
 
 ### 第三方框架/类库
 
