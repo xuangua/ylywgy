@@ -40,10 +40,11 @@ Page({
     })
   },
   login() {
-    getApp().user.isLogin(token => {
+    getApp().user.isLogin((token, userInfo) => {
       console.log(token)
       this.setData({
-        token: token
+        token: token,
+        user: userInfo
       })
       wx.showLoading({
         title: '加载中',
@@ -59,19 +60,23 @@ Page({
   get_data() {
     wx.request({
       url: getApp().api.get_v3_user_index,
+      // header: {
+      //   'Authorization': 'Bearer ' + getApp().user.ckLogin()
+      // },
       header: {
-        'Authorization': 'Bearer ' + getApp().user.ckLogin()
+        'content-type' : 'application/json',
+        'Cookie'       : "sid=" + getApp().user.ckLogin()
       },
       data: {
 
       }, success: res => {
         console.log(res)
-        if (res.data.status_code == 200) {
+        if (res.statusCode == 200) {
           this.setData({
             page_show: true,
             is_login: true,
             user: res.data.data.user,
-            user_data: res.data.data.user_data,
+            // user_data: res.data.data.user_data,
           })
         }
 

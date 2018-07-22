@@ -20,9 +20,9 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "云档",
+    "navigationBarTitleText": "医路有我公益",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#f7f7f7"
+    "backgroundColor": "#808080"
   },
   "tabBar": {
     "backgroundColor": "#ffffff",
@@ -54,5 +54,10 @@
         "selectedIconPath": "/assets/images/mine_fill.png"
       }
     ]
-  }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
 }

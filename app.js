@@ -2,7 +2,7 @@
 const Towxml = require('/towxml/main');
 const User = require('/utils/user');
 const Pages = require('/utils/pages');
-const HOST = "https://cloud-doc.leyix.com";
+const HOST = "https://wemall.wxapp.xuangua.xyz";
 //const HOST = "http://192.168.10.54:91";
 
 App({
@@ -11,6 +11,9 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+  },
+  onShow: function () {
+    console.log('onShow')
   },
   towxml: new Towxml(),
   user: new User(),
@@ -73,6 +76,7 @@ App({
     v3_user_follow_cancel: HOST + "/api/v3/user-follow-cancel",
 
     login: HOST + "/api/v3/login",
+    v3_login_with_user_info: HOST + "/api/v3/login-with-user-info",
     v3_scan_code_login: HOST + "/api/v3/scan-login",
 
     //问答
